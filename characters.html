@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS団のキャラクター - Characters of the SOS Brigade</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .japanese-text {
+            position: relative;
+            cursor: help;
+            display: inline-block;
+        }
+        
+        .japanese-text .jp,
+        .japanese-text .en {
+            text-align: center;
+            display: inline-block;
+            padding: 0 2px;
+        }
+        
+        .japanese-text .jp {
+            visibility: visible;
+        }
+        
+        .japanese-text:hover .jp {
+            visibility: hidden;
+        }
+        
+        .japanese-text .en {
+            visibility: hidden;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            box-shadow: 0 0 3px rgba(0,0,0,0.1);
+            z-index: 10;
+            padding: 0 5px;
+            border-radius: 3px;
+            width: max-content;
+        }
+        
+        .japanese-text:hover .en {
+            visibility: visible;
+        }
+        
+        /* Navigation Bar Styles */
+        .navbar {
+            text-align: center;
+            padding: 10px 0;
+            margin: 30px auto 5px;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .navbar ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar li {
+            margin: 0 20px;
+        }
+
+        .logo-item {
+            margin: 0 30px; /* Slightly larger margin for the logo */
+        }
+
+        .site-logo {
+            width: 65px;
+            height: 65px;
+            vertical-align: middle;
+            margin-bottom: -5px; /* Slight adjustment to vertical alignment */
+        }
+
+        .navbar .nav-link {
+            text-decoration: none;
+            color: #0066cc;
+            font-size: 14px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+        
+        /* Character Card Styles */
+        .character-card {
+            max-width: 800px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .character-image {
+            width: 150px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            border: 2px solid #000;
+            margin: 15px;
+        }
+        
+        .character-info {
+            flex: 1;
+            padding: 15px;
+            text-align: left;
+        }
+        
+        .character-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 0 10px;
+        }
+        
+        .haruhi-text {
+            color: #ff0000;
+        }
+        
+        .kyon-text {
+            color: #0066cc;
+        }
+        
+        .yuki-text {
+            color: #ff00cc;
+        }
+        
+        .mikuru-text {
+            color: #00cccc;
+        }
+        
+        .koizumi-text {
+            color: #ff9900;
+        }
+        
+        .character-detail {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        
+        .character-description {
+            margin-top: 15px;
+            line-height: 1.5;
+        }
+        
+        .spoiler-button {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 12px;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        
+        .spoiler-content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #000;
+            margin-top: 10px;
+            background-color: #fff;
+            text-align: left;
+        }
+        
+        /* Character colors */
+        .haruhi-color {
+            background-color: #ff0000;
+        }
+        
+        .kyon-color {
+            background-color: #0066cc;
+        }
+        
+        .yuki-color {
+            background-color: #ff00cc;
+        }
+        
+        .mikuru-color {
+            background-color: #00cccc;
+        }
+        
+        .koizumi-color {
+            background-color: #ff9900;
+        }
+        
+        /* Minor Characters */
+        .minor-characters {
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+        
+        .minor-characters h2 {
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        
+        .minor-characters ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .minor-characters li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .minor-characters a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        .minor-characters a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar"></div>
+    
+    <nav class="navbar">
+        <ul>
+            <li><a href="about.html" class="nav-link japanese-text"><span class="jp">自己紹介</span><span class="en">About</span></a></li>
+            <li><a href="characters.html" class="nav-link japanese-text"><span class="jp">キャラクター</span><span class="en">Characters</span></a></li>
+            <li><a href="media.html" class="nav-link japanese-text"><span class="jp">メディア</span><span class="en">Media</span></a></li>
+            <li class="logo-item"><a href="index.html"><img src="images/sos-logo.svg" alt="SOS Logo" class="site-logo"></a></li>
+            <li><a href="watchorder.html" class="nav-link japanese-text"><span class="jp">視聴順</span><span class="en">Watch Order</span></a></li>
+            <li><a href="analysis.html" class="nav-link japanese-text"><span class="jp">分析</span><span class="en">Analysis</span></a></li>
+            <li><a href="influences.html" class="nav-link japanese-text"><span class="jp">影響</span><span class="en">Influences</span></a></li>
+            <li><a href="guestbook.html" class="nav-link japanese-text"><span class="jp">ゲストブック</span><span class="en">Guestbook</span></a></li>
+        </ul>
+    </nav>
+    
+    <!-- Haruhi Suzumiya -->
+    <div class="character-card">
+        <div class="character-image haruhi-color">
+            Haruhi
+        </div>
+        <div class="character-info">
+            <h2 class="character-name haruhi-text">Haruhi Suzumiya</h2>
+            <p class="character-detail"><strong>Japanese:</strong> 涼宮 ハルヒ (Suzumiya Haruhi)</p>
+            <p class="character-detail"><strong>Role:</strong> Brigade Chief and Founder</p>
+            <p class="character-detail"><strong>Class:</strong> 1-5 (First Season) / 2-5 (Second Season)</p>
+            
+            <p class="character-description">
+                Haruhi is the eccentric and energetic founder of the SOS Brigade. She is bored with normal human life and seeks out supernatural phenomena and figures such as aliens, time travelers, and espers.
+            </p>
+            
+            <div class="spoiler-button" id="haruhi-spoiler-toggle">Click to reveal spoiler</div>
+            <div class="spoiler-content" id="haruhi-spoiler-content">
+                <p>Haruhi is unknowingly a god-like entity with the power to change reality according to her desires. Her emotional state can drastically affect the world around her, creating closed spaces when she becomes frustrated or bored.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Kyon -->
+    <div class="character-card">
+        <div class="character-image kyon-color">
+            Kyon
+        </div>
+        <div class="character-info">
+            <h2 class="character-name kyon-text">Kyon</h2>
+            <p class="character-detail"><strong>Role:</strong> Narrator and Sole Normal Human</p>
+            <p class="character-detail"><strong>Class:</strong> 1-5 (First Season) / 2-5 (Second Season)</p>
+            
+            <p class="character-description">
+                Kyon is the narrator and main protagonist of the series. Despite his cynical and sarcastic nature, he is the only normal human in the group and serves as the audience surrogate. He is the only person who can talk back to Haruhi without facing severe consequences.
+            </p>
+            
+            <div class="spoiler-button" id="kyon-spoiler-toggle">Click to reveal spoiler</div>
+            <div class="spoiler-content" id="kyon-spoiler-content">
+                <p>Despite being "normal," Kyon is actually Haruhi's chosen one, and has the ability to influence her more than anyone else. Some theories suggest he may have powers of his own that he is unaware of.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Yuki Nagato -->
+    <div class="character-card">
+        <div class="character-image yuki-color">
+            Yuki
+        </div>
+        <div class="character-info">
+            <h2 class="character-name yuki-text">Yuki Nagato</h2>
+            <p class="character-detail"><strong>Japanese:</strong> 長門 有希 (Nagato Yuki)</p>
+            <p class="character-detail"><strong>Role:</strong> Literature Club Member, SOS Brigade Member</p>
+            <p class="character-detail"><strong>Class:</strong> 1-5 (First Season) / 2-5 (Second Season)</p>
+            
+            <p class="character-description">
+                Yuki is a quiet, reserved girl who is always reading in the club room. She rarely shows emotion and speaks very little. She is the only original member of the Literature Club which the SOS Brigade took over.
+            </p>
+            
+            <div class="spoiler-button" id="yuki-spoiler-toggle">Click to reveal spoiler</div>
+            <div class="spoiler-content" id="yuki-spoiler-content">
+                <p>Yuki is actually a humanoid interface created by the Data Overmind, an alien entity that exists as data. She possesses immense data manipulation powers, allowing her to alter reality, create shields, and fight at superhuman levels.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mikuru Asahina -->
+    <div class="character-card">
+        <div class="character-image mikuru-color">
+            Mikuru
+        </div>
+        <div class="character-info">
+            <h2 class="character-name mikuru-text">Mikuru Asahina</h2>
+            <p class="character-detail"><strong>Japanese:</strong> 朝比奈 みくる (Asahina Mikuru)</p>
+            <p class="character-detail"><strong>Role:</strong> SOS Brigade Member, "Mascot"</p>
+            <p class="character-detail"><strong>Class:</strong> 2-A (First Season) / 3-A (Second Season)</p>
+            
+            <p class="character-description">
+                Mikuru is a shy, timid girl who was forcibly recruited into the SOS Brigade by Haruhi to serve as the "cute mascot." She is often made to wear various costumes by Haruhi, much to her embarrassment. Despite her timid nature, she is kind-hearted and cares for her fellow club members.
+            </p>
+            
+            <div class="spoiler-button" id="mikuru-spoiler-toggle">Click to reveal spoiler</div>
+            <div class="spoiler-content" id="mikuru-spoiler-content">
+                <p>Mikuru is actually a time traveler from the future who was sent back to observe Haruhi. Her mission is classified, and she is often unable to divulge information due to creating time paradoxes. There are two versions of her in the timeline: the current Mikuru and her future self.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Itsuki Koizumi -->
+    <div class="character-card">
+        <div class="character-image koizumi-color">
+            Koizumi
+        </div>
+        <div class="character-info">
+            <h2 class="character-name koizumi-text">Itsuki Koizumi</h2>
+            <p class="character-detail"><strong>Japanese:</strong> 古泉 一樹 (Koizumi Itsuki)</p>
+            <p class="character-detail"><strong>Role:</strong> SOS Brigade Member, Transfer Student</p>
+            <p class="character-detail"><strong>Class:</strong> 1-9 (First Season) / 2-9 (Second Season)</p>
+            
+            <p class="character-description">
+                Koizumi is a transfer student who joins the brigade shortly after its formation. He is always smiling and speaks in a polite, somewhat cryptic manner. He appears to go along with all of Haruhi's plans without complaint and often explains situations to Kyon.
+            </p>
+            
+            <div class="spoiler-button" id="koizumi-spoiler-toggle">Click to reveal spoiler</div>
+            <div class="spoiler-content" id="koizumi-spoiler-content">
+                <p>Koizumi is an esper who works for the "Agency," an organization dedicated to monitoring Haruhi and combating the closed spaces and celestials she creates when emotionally unstable. He, along with other espers, gains his powers within these closed spaces.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Minor Characters -->
+    <div class="minor-characters">
+        <h2>Other Notable Characters</h2>
+        <ul>
+            <li><strong>Shamisen:</strong> A calico cat that gains the ability to speak during the filming of the brigade's movie</li>
+            <li><strong>Adult Mikuru:</strong> Future version of <a href="#">Mikuru</a> who occasionally appears to guide events</li>
+            <li><strong>Yasumi Watahashi:</strong> A mysterious character who appears in later stories</li>
+            <li><strong>Kuyou Suou:</strong> A representative of another alien faction, the Sky Canopy Dominion</li>
+            <li><strong>Fujiwara:</strong> A rogue time traveler opposed to Mikuru's faction</li>
+            <li><strong>Sasaki:</strong> Kyon's middle school friend who may have powers similar to Haruhi</li>
+            <li><strong>Tsuruya:</strong> Mikuru's energetic and cheerful friend with distinctive green hair and a loud laugh</li>
+            <li><strong>Kyon's Sister:</strong> Kyon's energetic younger sister who admires Haruhi and sometimes visits the club</li>
+            <li><strong>Computer Research Society President:</strong> Forced to give his computer to the SOS Brigade after being framed</li>
+            <li><strong>Taniguchi:</strong> Kyon's friend and classmate who once dated Haruhi briefly</li>
+            <li><strong>Kunikida:</strong> Another of Kyon's friends who often appears alongside Taniguchi</li>
+            <li><strong>Emiri Kimidori:</strong> Another humanoid interface like Nagato who appears occasionally</li>
+        </ul>
+    </div>
+    
+    <div class="marquee-container">
+        <div class="marquee">
+            SOS団のサイトへようこそ！Welcome to the SOS Brigade website! This site is best viewed in Internet Explorer 6.0 or Netscape Navigator at 800x600 resolution
+        </div>
+    </div>
+    
+    <footer>
+        <p> 2025 - Cleo Rosen</p>
+        <p>This is a fan-made site and is not affiliated with any official Haruhi Suzumiya entities.</p>
+    </footer>
+    
+    <script src="js/config.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Spoiler toggle functionality for each character
+        document.getElementById('haruhi-spoiler-toggle').addEventListener('click', function() {
+            toggleSpoiler('haruhi-spoiler-content', this);
+        });
+        
+        document.getElementById('kyon-spoiler-toggle').addEventListener('click', function() {
+            toggleSpoiler('kyon-spoiler-content', this);
+        });
+        
+        document.getElementById('yuki-spoiler-toggle').addEventListener('click', function() {
+            toggleSpoiler('yuki-spoiler-content', this);
+        });
+        
+        document.getElementById('mikuru-spoiler-toggle').addEventListener('click', function() {
+            toggleSpoiler('mikuru-spoiler-content', this);
+        });
+        
+        document.getElementById('koizumi-spoiler-toggle').addEventListener('click', function() {
+            toggleSpoiler('koizumi-spoiler-content', this);
+        });
+        
+        function toggleSpoiler(contentId, button) {
+            const spoilerContent = document.getElementById(contentId);
+            if (spoilerContent.style.display === 'none' || spoilerContent.style.display === '') {
+                spoilerContent.style.display = 'block';
+                button.textContent = 'Hide spoiler';
+            } else {
+                spoilerContent.style.display = 'none';
+                button.textContent = 'Click to reveal spoiler';
+            }
+        }
+    </script>
+</body>
+</html> 
