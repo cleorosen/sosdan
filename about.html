@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS団について - About the SOS Brigade</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Ensure that Japanese text elements keep their styling when hovered */
+        .japanese-text {
+            position: relative;
+            cursor: help;
+        }
+        
+        .japanese-text:hover .jp {
+            display: none;
+        }
+        
+        .japanese-text .en {
+            display: none;
+        }
+        
+        .japanese-text:hover .en {
+            display: inline;
+        }
+        
+        /* Override cursor for the Enter link */
+        .enter-link {
+            cursor: pointer;
+        }
+
+        /* About page specific styles */
+        .about-content {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .sos-title {
+            color: #f00;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .about-text {
+            color: #888;
+            font-size: 14px;
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .members-list {
+            color: #777;
+            font-size: 18px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .info-table td, .info-table th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .info-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .section-header {
+            color: #0066cc;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 30px 0 15px;
+            text-align: left;
+        }
+
+        .spoiler-box {
+            border: 1px solid #ddd;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .announcement-box {
+            background-color: #ffffcc;
+            border: 1px solid #e6e6e6;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        /* Navigation Bar Styles */
+        .navbar {
+            text-align: center;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        .navbar ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar li {
+            margin: 0 15px;
+        }
+
+        .navbar .nav-link {
+            text-decoration: none;
+            color: #0066cc;
+            font-size: 16px;
+            font-weight: bold;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .navbar .nav-link:hover {
+            color: #ff69b4;
+        }
+
+        .navbar .nav-link.active {
+            color: #ff69b4;
+        }
+
+        .navbar .logo-link {
+            display: block;
+            width: 40px;
+            height: 40px;
+            margin: 0 20px;
+        }
+
+        .nav-logo {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar"></div>
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html" class="nav-link japanese-text"><span class="jp">約</span><span class="en">Home</span></a></li>
+            <li><a href="members.html" class="nav-link japanese-text"><span class="jp">メンバー</span><span class="en">Members</span></a></li>
+            <li><a href="gallery.html" class="nav-link japanese-text"><span class="jp">ギャラリー</span><span class="en">Gallery</span></a></li>
+            <li><a href="view.html" class="nav-link japanese-text"><span class="jp">みる</span><span class="en">View</span></a></li>
+            <li><a href="media.html" class="nav-link japanese-text"><span class="jp">メディア</span><span class="en">Media</span></a></li>
+            <li><a href="analysis.html" class="nav-link japanese-text"><span class="jp">分析</span><span class="en">Analysis</span></a></li>
+            <li><a href="influence.html" class="nav-link japanese-text"><span class="jp">影響</span><span class="en">Influence</span></a></li>
+            <li><a href="guest.html" class="nav-link japanese-text active"><span class="jp">ゲスト</span><span class="en">Guest</span></a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <!-- Content from Picture 1 -->
+        <div class="about-content">
+            <h1 class="sos-title">SOS団!!!!</h1>
+            
+            <p class="about-text japanese-text">
+                <span class="jp">私たちはSOS団であり、この世界の謎のすべてを解決することをお約束します。</span>
+                <span class="en">We are the SOS Brigade and we promise to solve all the mysteries of this world.</span>
+            </p>
+            
+            <p class="about-text japanese-text">
+                <span class="jp">私たちを雇うことを恥ずかしがらないでください。あなたの周りに何か異常を見つけたら、すぐに私たちにメールを送ってください。</span>
+                <span class="en">Don't be shy to hire us. If you notice anything unusual around you, please email us immediately.</span>
+            </p>
+            
+            <p class="about-text japanese-text">
+                <span class="jp">トピックが何であっても、私たちはあなたのためにそれを解決するために一生懸命努力します。</span>
+                <span class="en">Whatever the topic may be, we will work hard to resolve it for you.</span>
+            </p>
+            
+            <p class="about-text japanese-text">
+                <span class="jp">あなたの事件を解決するために一生懸命働きなさい。</span>
+                <span class="en">We will work hard to solve your case.</span>
+            </p>
+            
+            <p class="about-text japanese-text">
+                <span class="jp">私の名前はハルヒと私の奴隷、または旅団のメンバーは次のとおりです。</span>
+                <span class="en">My name is Haruhi and my slaves, or the members of the brigade, are as follows.</span>
+            </p>
+            
+            <div class="members-list">
+                <p class="japanese-text">
+                    <span class="jp">-みくる</span>
+                    <span class="en">-Mikuru</span>
+                </p>
+                <p class="japanese-text">
+                    <span class="jp">-小泉</span>
+                    <span class="en">-Koizumi</span>
+                </p>
+                <p class="japanese-text">
+                    <span class="jp">-ゆき</span>
+                    <span class="en">-Yuki</span>
+                </p>
+                <p class="japanese-text">
+                    <span class="jp">-キョン（私たちの便利屋）</span>
+                    <span class="en">-Kyon (our handyman)</span>
+                </p>
+            </div>
+        </div>
+        
+        <!-- Content from Picture 2 -->
+        <div class="about-content">
+            <h1 class="sos-title">SOS団!!!! - The SOS Brigade</h1>
+            
+            <h2 class="section-header">About the SOS Brigade</h2>
+            
+            <p>Welcome to the official SOS Brigade fansite! This site is dedicated to spreading information about the SOS Brigade and "The Melancholy of Haruhi Suzumiya" series.</p>
+            
+            <table class="info-table">
+                <tr>
+                    <td>Full Name:</td>
+                    <td>Spreading excitement all Over the world with Haruhi Suzumiya Brigade</td>
+                </tr>
+                <tr>
+                    <td>Japanese Name:</td>
+                    <td>世界を大いに盛り上げるための涼宮ハルヒの団</td>
+                </tr>
+                <tr>
+                    <td>Abbreviation:</td>
+                    <td>SOS団 (SOS Brigade)</td>
+                </tr>
+                <tr>
+                    <td>Founded by:</td>
+                    <td>Haruhi Suzumiya</td>
+                </tr>
+                <tr>
+                    <td>Mission:</td>
+                    <td>To find aliens, time travelers, and espers!</td>
+                </tr>
+            </table>
+            
+            <h2 class="section-header">What is the SOS Brigade?</h2>
+            
+            <p>The SOS Brigade is a school club founded by Haruhi Suzumiya at North High School. Its stated purpose is to find and investigate mysterious phenomena such as aliens, time travelers, and espers, as well as have fun and "spread excitement all over the world."</p>
+            
+            <h2 class="section-header">About The Series</h2>
+            
+            <p>"The Melancholy of Haruhi Suzumiya" is a Japanese light novel series written by Nagaru Tanigawa and illustrated by Noizi Ito. The story follows high school student Haruhi Suzumiya, who is uninterested in ordinary humans and seeks out supernatural phenomena and figures such as aliens, time travelers, and espers.</p>
+            
+            <h2 class="section-header">Series Background</h2>
+            
+            <p>The series began as a light novel and was later adapted into a manga and an anime series. It gained significant popularity for its unique storytelling, interesting characters, and non-linear narrative structure.</p>
+            
+            <div class="spoiler-box">
+                <h3>Major Plot Spoiler: <button id="spoiler-toggle">Show/Hide</button></h3>
+                <div id="spoiler-content" style="display: none;">
+                    <p>Haruhi Suzumiya is actually an unwitting god-like entity with the power to change reality. She is unaware of her abilities, and the SOS Brigade actually consists of an alien (Yuki Nagato), a time traveler (Mikuru Asahina), and an esper (Itsuki Koizumi) who were all sent to observe her. Kyon, the narrator, is an ordinary human caught up in these extraordinary circumstances.</p>
+                </div>
+            </div>
+            
+            <div class="announcement-box">
+                <h3>Important Announcement!!!!</h3>
+                <p>The SOS Brigade is always looking for mysterious phenomena!</p>
+                <p>If you encounter any aliens, time travelers, or espers, please report them immediately!</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="marquee-container">
+        <div class="marquee">
+            SOS団のサイトへようこそ！Welcome to the SOS Brigade website! This site is best viewed in Internet Explorer 6.0 or Netscape Navigator at 800x600 resolution
+        </div>
+    </div>
+    
+    <footer>
+        <p> 2025 - Cleo Rosen</p>
+        <p>This is a fan-made site and is not affiliated with any official Haruhi Suzumiya entities.</p>
+    </footer>
+    
+    <script src="js/config.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Spoiler toggle functionality
+        document.getElementById('spoiler-toggle').addEventListener('click', function() {
+            const spoilerContent = document.getElementById('spoiler-content');
+            if (spoilerContent.style.display === 'none') {
+                spoilerContent.style.display = 'block';
+                this.textContent = 'Hide';
+            } else {
+                spoilerContent.style.display = 'none';
+                this.textContent = 'Show';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS団のサイト</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Ensure that Japanese text elements keep their styling when hovered */
+        .japanese-text {
+            position: relative;
+            cursor: help;
+        }
+        
+        .japanese-text:hover .jp {
+            display: none;
+        }
+        
+        .japanese-text .en {
+            display: none;
+        }
+        
+        .japanese-text:hover .en {
+            display: inline;
+        }
+        
+        /* Override cursor for the Enter link */
+        .enter-link {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar"></div>
+    
+    <div class="container">
+        <div class="visitor-counter">
+            <span class="japanese-text">
+                <span class="jp">あなたは</span>
+            </span>
+            <div id="counter">
+                <span class="digit">0</span>
+                <span class="digit">0</span>
+                <span class="digit">0</span>
+                <span class="digit">0</span>
+                <span class="digit">0</span>
+                <span class="digit">0</span>
+                <span class="digit">0</span>
+                <span class="digit">0</span>
+            </div>
+            <span class="japanese-text">
+                <span class="jp">人目の訪問者です。</span>
+            </span>
+            <div class="counter-english">(You are visitor number <span id="counter-value">00000000</span>).</div>
+        </div>
+        
+        <h1 class="welcome-header japanese-text">
+            <span class="jp">SOS団のサイトへようこそ!</span>
+            <span class="en">Welcome to the SOS Brigade website!</span>
+        </h1>
+        
+        <div class="logo-container">
+            <div id="sos-logo">SOS</div>
+        </div>
+        
+        <div class="enter-container">
+            <a href="" class="enter-link japanese-text">
+                <span class="jp">入り口</span>
+                <span class="en">Enter</span>
+            </a>
+        </div>
+        
+        <div class="email-container">
+            <span class="japanese-text">
+                <span class="jp">メールはこちらから→</span>
+                <span class="en">Click here to email →</span>
+            </span>
+            <a href="mailto:drivenbycar@gmail.com" class="email-button">✉</a>
+        </div>
+        
+        <div class="browser-message">
+            <p class="japanese-text">
+                <span class="jp">このホームページはブラウザで800×600ピクセル以上で表示すると最適になります。</span>
+                <span class="en">This website is best viewed in a browser with a resolution of 800 x 600 pixels or greater.</span>
+            </p>
+            <p class="japanese-text">
+                <span class="jp">このサイトは、Javascriptを使用します。</span>
+                <span class="en">This site uses JavaScript.</span>
+            </p>
+        </div>
+        
+        <div class="construction">
+            <p class="japanese-text">
+            <span class="jp">★★★ 工事中 ★★★</span>
+            <span class="en">★★★ UNDER CONSTRUCTION ★★★</span>
+        </p>   
+        </div>
+    </div>
+    
+    <div class="marquee-container">
+        <div class="marquee">
+            SOS団のサイトへようこそ！Welcome to the SOS Brigade website! This site is best viewed in Internet Explorer 6.0 or Netscape Navigator at 800x600 resolution
+        </div>
+    </div>
+    
+    <footer>
+        <p> 2025 - Cleo Rosen</p>
+        <p>This is a fan-made site and is not affiliated with any official Haruhi Suzumiya entities.</p>
+    </footer>
+    
+    <script src="js/config.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

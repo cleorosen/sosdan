@@ -1,0 +1,208 @@
+/* Reset some basic elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    text-align: center;
+    background-color: white;
+}
+
+/* Top bar */
+.top-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #000;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Visitor counter */
+.visitor-counter {
+    margin: 30px 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+#counter {
+    display: inline-flex;
+    margin: 0 5px;
+}
+
+.digit {
+    display: inline-block;
+    width: 22px;
+    height: 26px;
+    background-color: #000;
+    color: white;
+    text-align: center;
+    line-height: 26px;
+    margin: 0 1px;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 18px;
+}
+
+.counter-english {
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    margin-top: 5px;
+    color: #555;
+}
+
+/* Welcome header */
+.welcome-header {
+    color: #ff0000;
+    font-size: 28px;
+    margin: 25px 0 30px;
+    font-weight: bold;
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+
+/* Logo */
+.logo-container {
+    margin: 35px 0;
+}
+
+#sos-logo {
+    width: 120px;
+    height: 120px;
+    background-color: #ff0000;
+    color: white;
+    font-size: 42px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Enter link */
+.enter-container {
+    margin: 30px 0;
+}
+
+.enter-link {
+    color: #0000ff;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-family: Arial, sans-serif;
+}
+
+.enter-link:hover {
+    color: #ff0000;
+}
+
+/* Email section */
+.email-container {
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.email-button {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-color: #ff0000;
+    color: white;
+    text-align: center;
+    line-height: 22px;
+    margin-left: 8px;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/* Browser message */
+.browser-message {
+    margin: 25px 0;
+    font-size: 12px;
+    color: #333;
+    line-height: 1.4;
+}
+
+/* Construction notice */
+.construction {
+    margin: 20px 0;
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Scrolling marquee */
+.marquee-container {
+    width: 80%;
+    max-width: 800px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    padding: 5px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 25px auto 15px;
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+.marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 30s linear infinite;
+    padding-left: 100%;
+}
+
+@keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Footer */
+footer {
+    padding: 15px 20px;
+    font-size: 11px;
+    color: #555;
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+/* Japanese text hover effect */
+.japanese-text {
+    position: relative;
+    cursor: default;
+}
+
+.japanese-text[data-english]:hover::after,
+.japanese-text[data-english]:hover::before {
+    content: none;
+}
+
+.japanese-text[data-english]:hover {
+    color: inherit; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .visitor-counter {
+        flex-direction: column;
+    }
+    
+    .welcome-header {
+        font-size: 24px;
+    }
+}
