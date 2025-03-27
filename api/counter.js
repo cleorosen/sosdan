@@ -1,34 +1,26 @@
-// Simple counter API using a JSON file for storage
-// Can be deployed to Netlify, Vercel, or other serverless platforms
-
 let count = 0;
 const fs = require('fs');
 const path = require('path');
 const dataPath = path.join(__dirname, 'count.json');
 
-// Initialize or read the current count
 try {
   if (fs.existsSync(dataPath)) {
     const data = fs.readFileSync(dataPath);
     count = JSON.parse(data).count;
   } else {
-    // Initialize with count = 0
     fs.writeFileSync(dataPath, JSON.stringify({ count: 0 }));
   }
 } catch (error) {
   console.error('Error initializing counter:', error);
 }
 
-// Function to handle HTTP requests
 exports.handler = async function(event, context) {
-  // Set CORS headers to allow requests from any origin
   const headers = {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Headers': 'Content-Type',
     'Access-Control-Allow-Methods': 'GET, POST, OPTIONS'
   };
 
-  // Handle OPTIONS request (preflight)
   if (event.httpMethod === 'OPTIONS') {
     return {
       statusCode: 204,
@@ -36,7 +28,6 @@ exports.handler = async function(event, context) {
     };
   }
 
-  // Handle GET request - return current count
   if (event.httpMethod === 'GET') {
     return {
       statusCode: 200,
@@ -45,7 +36,6 @@ exports.handler = async function(event, context) {
     };
   }
 
-  // Handle POST request - increment count
   if (event.httpMethod === 'POST') {
     count++;
     
@@ -66,8 +56,7 @@ exports.handler = async function(event, context) {
       };
     }
   }
-
-  // Handle unsupported methods
+  
   return {
     statusCode: 405,
     headers,
