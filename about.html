@@ -6,7 +6,6 @@
     <title>SOS団について - About the SOS Brigade</title>
     <link rel="stylesheet" href="css/styles.css">
     <style>
-        /* Ensure that Japanese text elements keep their styling when hovered */
         .japanese-text {
             position: relative;
             cursor: help;
@@ -24,12 +23,10 @@
             display: inline;
         }
         
-        /* Override cursor for the Enter link */
         .enter-link {
             cursor: pointer;
         }
 
-        /* About page specific styles */
         .about-content {
             width: 90%;
             max-width: 800px;
@@ -151,7 +148,6 @@
 <body>
     <div class="top-bar"></div>
     
-    <!-- Navigation Bar -->
     <nav class="navbar">
         <ul>
             <li><a href="index.html" class="nav-link japanese-text"><span class="jp">約</span><span class="en">Home</span></a></li>
@@ -166,7 +162,6 @@
     </nav>
     
     <div class="container">
-        <!-- Content from Picture 1 -->
         <div class="about-content">
             <h1 class="sos-title">SOS団!!!!</h1>
             
@@ -215,7 +210,6 @@
             </div>
         </div>
         
-        <!-- Content from Picture 2 -->
         <div class="about-content">
             <h1 class="sos-title">SOS団!!!! - The SOS Brigade</h1>
             
@@ -287,7 +281,6 @@
     <script src="js/config.js"></script>
     <script src="js/script.js"></script>
     <script>
-        // Spoiler toggle functionality
         document.getElementById('spoiler-toggle').addEventListener('click', function() {
             const spoilerContent = document.getElementById('spoiler-content');
             if (spoilerContent.style.display === 'none') {
